@@ -159,9 +159,10 @@ body {
 	margin: auto;
 	background-color: #A8D5D8 ;
 	position: relative;
+
 }
 #services .container::before{
-	content: ' ';
+	/*content: ' ';*/
 	background-color: #1C6474;
 	position: absolute;
 	width: 100%;
@@ -170,6 +171,7 @@ body {
 	left: 0;
 	z-index: 0;
 }
+
 
 #services .container {
 	justify-content: space-between;
@@ -185,7 +187,6 @@ body {
 	height: 337px;
 	padding: 1em;
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	z-index: 1;
 }
@@ -244,6 +245,18 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+footer {
+  background-color: #1c6474;
+  padding-block: 2em;
+  color: white;
+  text-align: center;
+  p {
+    a {
+      color: white;
+    }
+  }
+}
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -255,15 +268,16 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
-		width: 100%;
-	}
+	
+	#about-me .about-me__introduction,
+  #about-me .about-me__content {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 1000px) {
 	#about{
 		flex-direction: column;
-
 	}
 	.picture {
 		width: 50%;
@@ -351,6 +365,12 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+		object-fit: cover;
 	}
+	footer {
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
 
